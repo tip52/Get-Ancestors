@@ -1,4 +1,4 @@
--- a function  to get the ancestors (parents) of existing parts inside of the workspace.
+-- function to get the ancestors (parents) of existing parts inside of the workspace.
 
 local function GetAncestors(v)
     local ancestors = {}
