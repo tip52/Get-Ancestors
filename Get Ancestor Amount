@@ -7,9 +7,7 @@ local function GetAncestorAmt(v)
         repeat
             task.wait()
             ancestor = ancestor.Parent
-            if not table.find(ancestors,ancestor) then
                 table.insert(ancestors,ancestor)
-            end
 
         until ancestor.Parent == nil;
 
