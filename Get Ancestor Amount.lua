@@ -2,22 +2,15 @@
 
 local function GetAncestorAmt(v)
     local ancestors = {}
-    if v.Parent then
         local ancestor = v.Parent
         repeat
             task.wait()
             ancestor = ancestor.Parent
-                table.insert(ancestors,ancestor)
+            table.insert(ancestors,ancestor)
 
         until ancestor.Parent == nil;
 
-        if #ancestors >= 1 then
-            return #ancestors
-        else
-            return nil
-        end
     end
-end
 
 --Usage
 print(GetAncestorAmt(game.Players.LocalPlayer.Character))
