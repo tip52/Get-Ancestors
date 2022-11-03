@@ -8,17 +8,11 @@ local function GetAncestors(v)
         repeat
             task.wait()
             ancestor = ancestor.Parent
-            if not table.find(ancestors,ancestor) then
                 table.insert(ancestors,ancestor)
-            end
 
         until ancestor.Parent == nil;
 
-        if #ancestors >= 1 then
             return ancestors
-        else
-            return nil
-        end
     end
 end
 
