@@ -1,0 +1,25 @@
+--This function will return the amount of ancestors an item has, pretty easy to make since I changed 1 variable.
+
+local function GetAncestorAmt(v)
+    local ancestors = {}
+    if v.Parent then
+        local ancestor = v.Parent
+        repeat
+            task.wait()
+            ancestor = ancestor.Parent
+            if not table.find(ancestors,ancestor) then
+                table.insert(ancestors,ancestor)
+            end
+
+        until ancestor.Parent == nil;
+
+        if #ancestors >= 1 then
+            return #ancestors
+        else
+            return nil
+        end
+    end
+end
+
+--Usage
+print(GetAncestorAmt(game.Players.LocalPlayer.Character))
