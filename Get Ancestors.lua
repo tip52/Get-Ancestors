@@ -3,7 +3,6 @@
 
 local function GetAncestors(v)
     local ancestors = {}
-    if v ~= nil and v.Parent ~= nil then
         local ancestor = v.Parent
         repeat
             task.wait()
