@@ -13,7 +13,7 @@ end
 
 --Usage
 local AncestorTable = GetAncestors(game.Players.LocalPlayer.Character) -- setting table variable.
-local AncestorAmt = #AncestorTable -- getting the amound of ancestors.
+local AncestorAmt = #AncestorTable -- getting the amount of ancestors.
 print(table.unpack(AncestorTable)) -- unpacking the table.
 print(AncestorAmt) -- printing the variable with the amount of ancestors
 print(AncestorTable[1]) -- printing the first item in the ancestor table.
