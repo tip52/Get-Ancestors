@@ -11,10 +11,9 @@ local function GetAncestors(v)
 
         until ancestor.Parent == nil;
 
-            return ancestors
+            return ancestors, #ancestors
     end
-end
 
 --You can set a variable to the function like this
 local returned_table = GetAncestors(game.Players.LocalPlayer.Character)
-print(table.unpack(returned_table) -- we use table.unpack as the function does not do it for us (for various reasons such as not being able to reference items inside the table.)
+print(table.unpack(returned_table)) -- we use table.unpack as the function does not do it for us (for various reasons such as not being able to reference items inside the table.)
