@@ -8,11 +8,12 @@ local function GetAncestors(v)
         ancestor = ancestor.Parent
         table.insert(ancestors,ancestor)
     until ancestor.Parent == nil;
-    table.insert(ancestors,#ancestors)
     return ancestors
 end
 
 --Usage
-local AncestorTable = GetAncestors(game.Players.LocalPlayer.Character) -- setting table variable
-print(table.unpack(AncestorTable)) -- Unpacking the table
-print(AncestorTable[1]) -- printing the first item in the ancestor table
+local AncestorTable = GetAncestors(game.Players.LocalPlayer.Character) -- setting table variable.
+local AncestorAmt = #GetAncestors(game.Players.LocalPlayer.Character) -- getting the amound of ancestors.
+print(table.unpack(AncestorTable)) -- unpacking the table.
+print(AncestorAmt) -- printing the variable with the amount of ancestors
+print(AncestorTable[1]) -- printing the first item in the ancestor table.
