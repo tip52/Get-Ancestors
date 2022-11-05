@@ -17,3 +17,9 @@ local AncestorAmt = #AncestorTable -- getting the amount of ancestors.
 print(table.unpack(AncestorTable)) -- unpacking the table.
 print(AncestorAmt) -- printing the variable with the amount of ancestors
 print(AncestorTable[1]) -- printing the first item in the ancestor table.
+
+--Using GetAncestors() as you would use GetDescendants():
+
+for i,v in pairs(GetAncestors(game.Players.LocalPlayer)) do
+print(v)
+end
