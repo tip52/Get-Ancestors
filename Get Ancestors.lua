@@ -3,6 +3,7 @@
 local function GetAncestors(v)
     local ancestors = {}
     local ancestor = v.Parent
+    table.insert(ancestors,ancestor)
     repeat
         ancestor = ancestor.Parent
         table.insert(ancestors,ancestor)
