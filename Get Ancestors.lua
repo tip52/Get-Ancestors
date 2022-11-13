@@ -20,6 +20,6 @@ print(AncestorTable[1]) -- printing the first item in the ancestor table.
 
 --Using GetAncestors() as you would use GetDescendants():
 
-for i,v in pairs(GetAncestors(game.Players.LocalPlayer)) do
+for i,v in pairs(GetAncestors(game.Players.LocalPlayer.Character)) do
 print(v)
 end
